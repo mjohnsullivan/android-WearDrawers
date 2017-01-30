@@ -27,8 +27,6 @@ import android.support.wearable.view.drawer.WearableNavigationDrawer;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -106,7 +104,7 @@ public class MainActivity extends WearableActivity implements
     }
 
     private ArrayList<Planet> initializeSolarSystem() {
-        ArrayList<Planet> solarSystem = new ArrayList<Planet>();
+        ArrayList<Planet> solarSystem = new ArrayList<>();
         String[] planetArrayNames = getResources().getStringArray(R.array.planets_array_names);
 
         for (int i = 0; i < planetArrayNames.length; i++) {
@@ -234,4 +232,5 @@ public class MainActivity extends WearableActivity implements
             mImageView.setImageResource(imageId);
         }
     }
+
 }
