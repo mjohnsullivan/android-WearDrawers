@@ -19,6 +19,7 @@ package com.example.android.wearable.wear.weardrawers;
         import android.support.wearable.activity.WearableActivity;
         import android.support.wearable.view.DefaultOffsettingHelper;
         import android.support.wearable.view.WearableRecyclerView;
+        import android.support.wearable.view.drawer.WearableActionDrawer;
         import android.view.LayoutInflater;
         import android.view.View;
         import android.view.ViewGroup;
@@ -36,6 +37,14 @@ public class RecyclerActivity extends WearableActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler);
 
+        // Add custom view for the action drawer peek
+        WearableActionDrawer  mWearableActionDrawer =
+                (WearableActionDrawer) findViewById(R.id.bottom_action_drawer);
+
+        mWearableActionDrawer.setPeekContent(
+                getLayoutInflater().inflate(R.layout.layout_action_drawer_peek, null));
+
+        // Configure the recycler view
         WearableRecyclerView rv = (WearableRecyclerView)findViewById(R.id.rv);
         rv.setHasFixedSize(true);
 

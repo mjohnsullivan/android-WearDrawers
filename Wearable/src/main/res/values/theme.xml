@@ -18,6 +18,7 @@
     <style name="CustomStyle" parent="@android:style/Theme.DeviceDefault">
         <item name="android:colorForeground">@color/white</item> <!-- peek icon color  -->
         <item name="android:colorBackground">@color/blue</item> <!-- drawer icon color foreground -->
+        <item name="android:colorControlHighlight">@color/dark_grey</item> <!-- drawer icon color background -->
         <item name="android:textColorPrimary">@color/white</item> <!-- drawer text color -->
         <item name="android:colorBackgroundFloating">@color/dark_blue</item> <!-- drawer background color -->
     </style>
